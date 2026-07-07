@@ -1,0 +1,72 @@
+.project-layout{
+  display:flex;
+  min-height:100vh;
+}
+
+.project-main{
+  flex:1;
+}
+
+.project-page{
+  padding:40px;
+}
+
+.project-accent{
+  width:90px;
+  height:8px;
+  border-radius:999px;
+  margin-bottom:22px;
+}
+
+.project-page h1{
+  font-size:44px;
+  margin-bottom:8px;
+}
+
+.project-page > p{
+  color:#aaa;
+  margin-bottom:34px;
+}
+
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(240px, 1fr));
+  gap:24px;
+}
+
+.project-panel{
+  background:#181822;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  padding:24px;
+}
+
+.project-panel h2{
+  color:#b77dff;
+  margin-bottom:18px;
+}
+
+.project-panel h3{
+  font-size:42px;
+  margin-bottom:18px;
+}
+
+.project-progress-track{
+  height:10px;
+  background:#2b2b39;
+  border-radius:999px;
+  overflow:hidden;
+}
+
+.project-progress-fill{
+  height:100%;
+  background:linear-gradient(90deg,#7b2dff,#b77dff);
+}
+
+.project-panel ul{
+  padding-left:20px;
+}
+
+.project-panel li{
+  margin-bottom:12px;
+}

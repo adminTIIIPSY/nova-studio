@@ -1,0 +1,40 @@
+.bible-layout{
+  display:flex;
+  min-height:100vh;
+}
+
+.bible-main{
+  flex:1;
+}
+
+.bible-page{
+  padding:40px;
+}
+
+.bible-page h1{
+  font-size:44px;
+  margin-bottom:8px;
+}
+
+.bible-page > p{
+  color:#aaa;
+  margin-bottom:34px;
+}
+
+.bible-card{
+  background:#181822;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  padding:24px;
+  margin-bottom:20px;
+}
+
+.bible-card h2{
+  color:#b77dff;
+  margin-bottom:14px;
+}
+
+.bible-card p{
+  color:#aaa;
+  line-height:1.6;
+}

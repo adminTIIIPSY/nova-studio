@@ -1,0 +1,57 @@
+.bugs-layout{
+  display:flex;
+  min-height:100vh;
+}
+
+.bugs-main{
+  flex:1;
+}
+
+.bugs-page{
+  padding:40px;
+}
+
+.bugs-page h1{
+  font-size:44px;
+  margin-bottom:8px;
+}
+
+.bugs-page > p{
+  color:#aaa;
+  margin-bottom:34px;
+}
+
+.bugs-grid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(240px, 1fr));
+  gap:24px;
+}
+
+.bug-card{
+  background:#181822;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  padding:24px;
+}
+
+.bug-card h2{
+  color:#b77dff;
+  margin-bottom:14px;
+}
+
+.bug-card p{
+  color:#aaa;
+  margin-bottom:18px;
+}
+
+.bug-card strong{
+  color:#fff;
+}
+
+.bug-card.high{
+  border-color:rgba(255,68,68,.4);
+}
+
+.bug-card.medium{
+  border-color:rgba(255,170,0,.4);
+}

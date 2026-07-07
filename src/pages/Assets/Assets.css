@@ -1,0 +1,44 @@
+.assets-layout{
+  display:flex;
+  min-height:100vh;
+}
+
+.assets-main{
+  flex:1;
+}
+
+.assets-page{
+  padding:40px;
+}
+
+.assets-page h1{
+  font-size:44px;
+  margin-bottom:8px;
+}
+
+.assets-page > p{
+  color:#aaa;
+  margin-bottom:34px;
+}
+
+.assets-grid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(240px, 1fr));
+  gap:24px;
+}
+
+.asset-card{
+  background:#181822;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  padding:24px;
+}
+
+.asset-card h2{
+  color:#b77dff;
+  margin-bottom:14px;
+}
+
+.asset-card p{
+  color:#aaa;
+}

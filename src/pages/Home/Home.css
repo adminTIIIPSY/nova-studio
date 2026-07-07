@@ -1,0 +1,51 @@
+.home-layout{
+  display:flex;
+  min-height:100vh;
+}
+
+.home-main{
+  flex:1;
+}
+
+.home-page{
+  padding:40px;
+}
+
+.home-page h1{
+  font-size:44px;
+  margin-bottom:8px;
+}
+
+.home-page h2{
+  font-size:30px;
+  margin-bottom:8px;
+}
+
+.home-page > p{
+  color:#aaa;
+}
+
+.continue-button{
+  display:inline-block;
+  margin:28px 0 40px;
+  padding:18px 34px;
+  background:linear-gradient(90deg,#7b2dff,#b77dff);
+  color:white;
+  text-decoration:none;
+  font-size:22px;
+  font-weight:700;
+  border-radius:16px;
+  transition:.25s;
+  box-shadow:0 0 25px rgba(123,45,255,.35);
+}
+
+.continue-button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 40px rgba(123,45,255,.55);
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(180px, 1fr));
+  gap:20px;
+}

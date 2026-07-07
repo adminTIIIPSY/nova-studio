@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg:#09090b;
+  --panel:#14141b;
+  --purple:#8b2dff;
+  --purple-light:#b77dff;
+  --text:#ffffff;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,Segoe UI,Arial,sans-serif;
+}
+
+button{
+  cursor:pointer;
+}

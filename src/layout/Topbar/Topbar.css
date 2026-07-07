@@ -1,0 +1,55 @@
+.topbar{
+
+    height:80px;
+
+    background:#16161f;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 40px;
+
+}
+
+.topbar-left h2{
+
+    color:white;
+
+}
+
+.topbar-center input{
+
+    width:350px;
+
+    padding:12px 18px;
+
+    border-radius:10px;
+
+    border:none;
+
+    outline:none;
+
+    background:#242433;
+
+    color:white;
+
+}
+
+.topbar-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:24px;
+
+    color:white;
+
+    font-size:18px;
+
+}

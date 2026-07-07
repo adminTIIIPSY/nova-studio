@@ -1,0 +1,28 @@
+.primary-button{
+    background:linear-gradient(135deg,#7b2dff,#b76dff);
+    color:white;
+
+    border:none;
+    border-radius:14px;
+
+    padding:16px 30px;
+
+    font-size:18px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:
+        0 0 15px rgba(123,45,255,.45);
+}
+
+.primary-button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 0 30px rgba(123,45,255,.8);
+
+}

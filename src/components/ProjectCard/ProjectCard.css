@@ -1,0 +1,83 @@
+.project-card{
+
+    background:#181822;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.25s;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 25px rgba(123,45,255,.25);
+
+}
+
+.project-color{
+
+    width:60px;
+
+    height:8px;
+
+    border-radius:20px;
+
+    margin-bottom:18px;
+
+}
+
+.project-card h3{
+
+    margin-bottom:10px;
+
+}
+
+.project-card p{
+
+    color:#aaa;
+
+    margin-bottom:18px;
+
+}
+
+.progress-track{
+
+    background:#2b2b39;
+
+    height:8px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+.progress-fill{
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        #7b2dff,
+        #b77dff
+    );
+
+}
+
+.project-card span{
+
+    display:block;
+
+    margin-top:15px;
+
+    color:#b77dff;
+
+    font-weight:bold;
+
+}
