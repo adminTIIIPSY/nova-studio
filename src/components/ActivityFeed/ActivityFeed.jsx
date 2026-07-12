@@ -1,31 +1,48 @@
+import defaultActivity from "../../data/activity";
+import {
+  loadActivity,
+  saveActivity,
+} from "../../services/activityStorage";
+
 import "./ActivityFeed.css";
 
-function ActivityFeed(){
+function ActivityFeed() {
+  let activities = loadActivity();
 
-    return(
+  if (activities.length === 0) {
+    activities = defaultActivity;
+    saveActivity(defaultActivity);
+  }
 
-        <div className="activity-card">
-
-            <h2>Recent Activity</h2>
-
-            <ul>
-
-                <li>✔ Created Nova Studio</li>
-
-                <li>✔ Built Sidebar</li>
-
-                <li>✔ Built Topbar</li>
-
-                <li>✔ Added Project Cards</li>
-
-                <li>✔ Created Workspace</li>
-
-            </ul>
-
+  return (
+    <section className="activity-feed">
+      <div className="activity-feed-header">
+        <div>
+          <p className="activity-feed-label">STUDIO TIMELINE</p>
+          <h2>Recent Activity</h2>
         </div>
 
-    );
+        <span className="activity-feed-count">
+          {activities.length} Updates
+        </span>
+      </div>
 
+      <div className="activity-list">
+        {activities.map((item) => (
+          <article className="activity-item" key={item.id}>
+            <div className={`activity-icon activity-${item.type}`}>
+              {item.icon}
+            </div>
+
+            <div className="activity-content">
+              <h3>{item.title}</h3>
+              <p>{item.time}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
 }
 
 export default ActivityFeed;

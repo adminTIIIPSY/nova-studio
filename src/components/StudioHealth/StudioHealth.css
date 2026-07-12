@@ -1,0 +1,51 @@
+.studio-health {
+  background: #181822;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 22px;
+  padding: 30px;
+  box-shadow: 0 0 30px rgba(123,45,255,.12);
+}
+
+.studio-health-label{
+  color:#b77dff;
+  font-size:13px;
+  letter-spacing:2px;
+  font-weight:800;
+}
+
+.studio-health h2{
+  font-size:60px;
+  margin:18px 0;
+}
+
+.health-bar{
+  height:14px;
+  background:#2c2c39;
+  border-radius:999px;
+  overflow:hidden;
+  margin-bottom:30px;
+}
+
+.health-fill{
+  height:100%;
+  background:linear-gradient(90deg,#7b2dff,#b77dff);
+}
+
+.health-grid{
+  display:grid;
+  gap:16px;
+}
+
+.health-grid div{
+  display:flex;
+  justify-content:space-between;
+  color:#ddd;
+}
+
+.health-grid span{
+  color:#999;
+}
+
+.health-grid strong{
+  color:white;
+}
