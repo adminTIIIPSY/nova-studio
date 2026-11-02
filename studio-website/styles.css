@@ -2,3 +2,8 @@
 /* Preserve the full approved title artwork on the landscape game thumbnail. */
 .game-card:nth-child(3) .game-art img{object-fit:contain}
 @media(max-width:760px){h1{font-size:clamp(48px,15.5vw,110px)}}
+
+
+/* Approved original-pixel master: preserve aspect ratio and alpha at every placement. */
+.wordmark{width:138px;line-height:0}.wordmark>img{display:block;width:100%;height:auto;object-fit:contain}footer .wordmark{width:118px}
+@media(max-width:760px){.header .wordmark{width:120px}}
