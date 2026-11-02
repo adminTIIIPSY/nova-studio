@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "lint": "node --check app.js && node --check scripts/build.mjs && node scripts/validate.mjs"
+    "lint": "node --check app.js && node --check scripts/build.mjs && node scripts/validate.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node scripts/browser-review.mjs"
   }
 }

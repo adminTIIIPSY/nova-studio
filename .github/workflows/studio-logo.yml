@@ -1,0 +1,30 @@
+name: Studio logo checks
+on:
+  pull_request:
+    paths:
+      - 'studio-website/**'
+      - '.github/workflows/studio-logo.yml'
+permissions:
+  contents: read
+jobs:
+  logo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: studio-website
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm run lint && npm test && npm run build
+      - run: npm install --prefix "$RUNNER_TEMP/studio-browser" --no-save playwright
+      - run: node "$RUNNER_TEMP/studio-browser/node_modules/playwright/cli.js" install --with-deps chromium
+      - run: STUDIO_BROWSER_TOOLS="$RUNNER_TEMP/studio-browser" npm run test:browser
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: studio-logo-browser-review
+          path: studio-website/browser-evidence/
+          retention-days: 7
