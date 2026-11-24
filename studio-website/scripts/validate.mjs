@@ -1,0 +1,12 @@
+import { readFile, access } from 'node:fs/promises';
+import assert from 'node:assert/strict';
+const html = await readFile('index.html','utf8');
+const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(x=>x[1]);
+assert.equal(ids.length,new Set(ids).size,'Duplicate IDs');
+for(const match of html.matchAll(/href="#([^"]+)"/g)) assert(ids.includes(match[1]), `Missing anchor ${match[1]}`);
+for(const match of html.matchAll(/(?:src|href)="(\/[^"#]+)"/g)) await access('.'+match[1]);
+for(const email of ['partners','support','legal','security','admin']) assert(html.includes(`mailto:${email}@slot13studios.com`));
+assert(html.includes('prefers-reduced-motion') || (await readFile('styles.css','utf8')).includes('prefers-reduced-motion'));
+assert.equal([...html.matchAll(/<h1\b/g)].length,1);
+assert(!html.includes('href="https://play.slot13studios.com'));
+console.log('Passed: anchors, unique IDs, local assets, five contact emails, reduced motion, heading, future destination safety.');
